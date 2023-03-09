@@ -1,3 +1,5 @@
+"""Module that patch the APKs... in the future"""
+
 import os
 
 from time import time
