@@ -1,3 +1,14 @@
+# Program
+
+## ReVanced CLI
+revanced-cache/
+options.toml
+
+## APK
+APK/*/*
+
+#### Python
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
