@@ -1,3 +1,5 @@
+"""Module that display the recommended action to take after the patching and validation process"""
+
 action_to_take = []
 action_to_take.append("✅ Successful patching & validation - 0")
 action_to_take.append("✋ Require manual testing of the APK to ensure all patches are applied correctly - 1")
