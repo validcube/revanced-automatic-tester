@@ -51,11 +51,11 @@ def patch(input_directory):
 
                 print("\n")
 
-                actionToTake = aTT[1]
+                action_to_take = aTT[1]
                 patching_status = "✅ Patching successful"
 
                 apk_info.append(
-                    (apk_name, version, patching_status, actionToTake))
+                    (apk_name, version, patching_status, action_to_take))
                 
                 print(f'Took {time()-ds} seconds to finish patching {file}')
             except OSError or Exception as error:
