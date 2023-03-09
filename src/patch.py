@@ -8,7 +8,7 @@ import re
 from action_to_take import action_to_take as aTT
 
 try:
-    from alive_progress import alive_bar
+    # from alive_progress import alive_bar
     import tabulate
 except ImportError:
     print("Please install alive_progress using 'pip install alive-progress'")
@@ -58,7 +58,7 @@ def patch(input_directory):
 
                 apk_info.append(
                     (apk_name, version, patching_status, action_to_take))
-                
+
                 print(f'Took {time()-ds} seconds to finish patching {file}')
             except OSError or Exception as error:
                 print(error)
