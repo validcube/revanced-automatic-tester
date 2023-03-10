@@ -5,7 +5,7 @@ Determine if you can successfully patch an APK(s)
 
 
 ### 0.1 Python
-First, let's start by installing Python, this program recommends at least [Python 3.10 or higher](https://www.python.org/downloads/). Once you're in the installation, don't forget to check "Add python.exe to PATH".
+First, let's start by installing Python, this program recommends at least [Python 3.9 or higher](https://www.python.org/downloads/). Once you're in the installation, don't forget to check "Add python.exe to PATH".
 
 [![Add Python to Path](assets/addToPath.png "Add Python to Path")](#01-Python)
 
