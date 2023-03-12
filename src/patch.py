@@ -55,7 +55,7 @@ def patch(input_directory):
             ds = time()
             try:
                 action_to_take = status_message[1]
-                patching_status = "✅ Patching successful"
+                patching_status = status_message[7]
 
                 cmd = f"java -jar {rvcli} -a \"{input_location}/{file}\" -o \"{output_location}/{file}\" -b \"{rvpatches}\" -m \"{rvintegration}\" {arguments} -c"
                 os.system(cmd)
@@ -71,7 +71,7 @@ def patch(input_directory):
                 print(error)
                 print(
                     f'Error: Took {time()-ds} seconds to finish patching {file}')
-                patching_status = f"❎ Patching failed | {error}"
+                patching_status = f"{status_message[8]} | {error}"
                 action_to_take = status_message[4]
                 apk_info.append(
                     (apk_name, version, patching_status, action_to_take))
