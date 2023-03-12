@@ -6,10 +6,10 @@ from time import time
 import re
 
 try:
-    from src.action_to_take import action_to_take as aTT
+    from status_message import status_message
 except ImportError:
-    from action_to_take import action_to_take as aTT
-    print("Using workaround to import action_to_take module")
+    from status_message import status_message
+    print("Using workaround to import status_message module")
 
 try:
     # from alive_progress import alive_bar
@@ -54,7 +54,7 @@ def patch(input_directory):
             version = re.search(r"_([\d.]+)-\d+_minAPI", file).group(1)
             ds = time()
             try:
-                action_to_take = aTT[1]
+                action_to_take = status_message[1]
                 patching_status = "✅ Patching successful"
 
                 cmd = f"java -jar {rvcli} -a \"{input_location}/{file}\" -o \"{output_location}/{file}\" -b \"{rvpatches}\" -m \"{rvintegration}\" {arguments} -c"
@@ -72,7 +72,7 @@ def patch(input_directory):
                 print(
                     f'Error: Took {time()-ds} seconds to finish patching {file}')
                 patching_status = f"❎ Patching failed | {error}"
-                action_to_take = aTT[4]
+                action_to_take = status_message[4]
                 apk_info.append(
                     (apk_name, version, patching_status, action_to_take))
 
