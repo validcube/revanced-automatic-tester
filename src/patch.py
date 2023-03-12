@@ -33,7 +33,7 @@ file = ""
 verbose = True
 version = "0.0.4"
 variant = "dev"
-emoji = "🔧"
+emoji = "🤖"
 
 rvcli_info = re.search(r"cli-(\d+\.\d+\.\d+-\w+\.\d+)", rvcli)
 rvpatches_info = re.search(r"patches-(\d+\.\d+\.\d+-\w+\.\d+)", rvpatches)
