@@ -31,8 +31,9 @@ arguments = ""
 file = ""
 
 verbose = True
-version = "0.0.2"
-branch = "dev"
+version = "0.0.4"
+variant = "dev"
+emoji = "🔧"
 
 rvcli_info = re.search(r"cli-(\d+\.\d+\.\d+-\w+\.\d+)", rvcli)
 rvpatches_info = re.search(r"patches-(\d+\.\d+\.\d+-\w+\.\d+)", rvpatches)
@@ -79,10 +80,14 @@ def patch(input_directory):
 
 
 def format_output(apks, style="github"):
+
+    # Print APK status
     print(tabulate.tabulate(apks, headers=[
           "APK name", "Version", "Status", "Action"], tablefmt=style))
-    print(tabulate.tabulate([["ReVanced CLI", rvcli_info.group(1)], ["ReVanced Patches", rvpatches_info.group(1)], [
-          "ReVanced Integrations", rvintegration_info.group(1)], ["(unofficial) ReVanced Automatic Patcher", f'{version}-{branch}']], headers=["Tool", "Version"], tablefmt="github"))
+    
+    # Print ReVanced tools version
+    print(tabulate.tabulate([["💻 ReVanced CLI", rvcli_info.group(1)], ["🧩 ReVanced Patches", rvpatches_info.group(1)], [
+          "🔩 ReVanced Integrations", rvintegration_info.group(1)], [f"{emoji} (unofficial) ReVanced Automatic Patcher", f'{version}-{variant}']], headers=["Tool", "Version"], tablefmt=style))
 
 
 ts = time()
