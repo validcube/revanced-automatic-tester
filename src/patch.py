@@ -21,9 +21,9 @@ except ImportError:
 
 path = f"{os.getcwd()}/src/"
 
-rvcli = path + "revanced-cli-2.20.1-dev.1-all.jar"
-rvpatches = path + "revanced-patches-2.165.0-dev.9.jar"
-rvintegration = path + "revanced-integrations-0.100.0-dev.8.apk"
+rvcli = path + "revanced-cli-2.20.1-all.jar"
+rvpatches = path + "revanced-patches-2.167.0.jar"
+rvintegration = path + "revanced-integrations-0.102.0-dev.1.apk"
 APK = "D:/HS-Storage/Project/revanced-automatic-tester/APK"
 input_location = "D:/HS-Storage/Project/revanced-automatic-tester/APK/Input"
 output_location = "D:/HS-Storage/Project/revanced-automatic-tester/APK/Output"
@@ -31,8 +31,8 @@ arguments = ""
 file = ""
 
 verbose = True
-version = "0.0.4"
-variant = "dev"
+version = "0.0.11"
+variant = "dev_python_aapt2"
 emoji = "🤖"
 
 rvcli_info = re.search(r"cli-(\d+\.\d+\.\d+)", rvcli)
