@@ -35,10 +35,10 @@ version = "0.0.4"
 variant = "dev"
 emoji = "🤖"
 
-rvcli_info = re.search(r"cli-(\d+\.\d+\.\d+-\w+\.\d+)", rvcli)
-rvpatches_info = re.search(r"patches-(\d+\.\d+\.\d+-\w+\.\d+)", rvpatches)
+rvcli_info = re.search(r"cli-(\d+\.\d+\.\d+)", rvcli)
+rvpatches_info = re.search(r"patches-(\d+\.\d+\.\d+)", rvpatches)
 rvintegration_info = re.search(
-    r"integrations-(\d+\.\d+\.\d+-\w+\.\d+)", rvintegration)
+    r"integrations-(\d+\.\d+\.\d+)", rvintegration)
 
 experimental = True
 if experimental is True:
